@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  form(method = 'POST', action = '/new')
+    label(for = 'author') Author:
+    br
+    input(type = 'text', id = 'author', name = 'author', required)
+    br
+    br
+    label(for = 'message') Message:
+    br
+    input(type = 'text', id = 'message', name = 'message', required)
+    br
+    br
+    input(value='Submit', type='submit')
+    //- button(type = 'button')
+
+//-   ul
+//-     each message in messages
+//-       p #{message.text}
+//-       p Made by #{message.user} on #{message.added}
+//-       br
